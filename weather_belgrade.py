@@ -4,7 +4,7 @@ import json
 
 root = Tk()
 root.title('Air Quality')
-root.geometry('350x250')
+root.geometry('500x250')
 
 
 url = "https://aerisweather1.p.rapidapi.com/observations/44.6585512,20.2063274"
@@ -26,8 +26,8 @@ visibility = response['response']['ob']['visibilityKM']
 weather = response['response']['ob']['weather']
 
 
-label = Label(root, text='' + 'City: ' + city + '\nTemp: ' + str(temp)+'c' + '\nReal Feel: ' + str(feels_like_temp)+'c' +\
- 	'\nVisibility: ' + str(int(visibility * 1000))+'m' + '\nPressure: ' + str(pressure)+' mbar' +\
+label = Label(root, text='' + 'City: ' + city + '\nTemp: ' + str(temp)+' C' + '\nReal Feel: ' + str(int(feels_like_temp))+' C' +\
+ 	'\nVisibility: ' + str(int(visibility * 1000))+' m' + '\nPressure: ' + str(pressure)+' mbar' +\
  	'\nWind: ' + str(wind)+' km/h' + '\nWeather: ' + weather, font=('Arial', 20))
 label.pack()
 
